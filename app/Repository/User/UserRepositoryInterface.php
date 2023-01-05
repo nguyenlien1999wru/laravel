@@ -1,9 +1,10 @@
 <?php
 namespace App\Repository\User;
 
-use App\Repository\BaseRepositoryInterface;
+use App\Repository\RepositoryInterface;
 
-interface  UserRepositoryInterface extends BaseRepositoryInterface
+interface UserRepositoryInterface extends RepositoryInterface
 {
+    public function test($xxxx);
 
 }

@@ -15,5 +15,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+    return 1;
 });
+Route::get('/user', [\App\Http\Controllers\Api\UserController::class, 'index']);
+Route::put('/user/{id}', [\App\Http\Controllers\Api\UserController::class, 'update']);
+Route::post('/add', [\App\Http\Controllers\Api\UserController::class, 'add']);
+Route::delete('/delete/{id}', [\App\Http\Controllers\Api\UserController::class, 'detete']);
+
+/**
+ * Router::get('index') -> index lấy dữ liệu -> xây trong base
+ * Router::post('create') -> de tem du lieu -> xay ham base
+ * Route::put('update')
+ * Router::delete('delete')
+ */

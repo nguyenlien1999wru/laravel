@@ -1,20 +1,20 @@
 <?php
 namespace App\Repository\User;
 
-use App\Models\User;
+use App\Repository\User\UserRepositoryInterface;
 use App\Repository\BaseRepository;
 
-abstract class UserRepository extends BaseRepository implements UserRepositoryInterface
+
+class UserRepository extends BaseRepository implements UserRepositoryInterface
 {
+    //lấy model tương ứng
     public function getModel()
     {
-        return User::class;
+      return   \App\Models\User::class;
     }
-
-    public function test(){
-        return $this->model::get();
+    public function test($xxxx)
+    {
+        return 'hello';
     }
-
-
 
 }
